@@ -1,11 +1,24 @@
-const TableIntro = () => {
+import { useTable } from 'react-table';
+
+const Table = ({ columns, data }) => {
+  const {
+    getTableProps, // table props from react-table
+    getTableBodyProps, // table body props from react-table
+    headerGroups, // headerGroups, if your table has groupings
+    rows, // rows for the table based on the data passed
+    prepareRow, // Prepare the row (this function needs to be called for each row before getting the row props)
+  } = useTable({
+    columns,
+    data,
+  });
+
   return (
     <section className='py-8'>
       <div className='max-w-6xl mx-auto p-4'>
         <h4 className='mb-7 font-medium text-xl lg:text-2xl text-gray-800'>
           Covid-19 cases breakdown
         </h4>
-        <div className='flex flex-col md:flex-row items-center justify-between'>
+        <div className='flex flex-col md:flex-row items-center justify-between sticky top-0'>
           <div className='w-full lg:w-80'>
             <label className='block'>
               <span className='text-gray-700'>Search by country</span>
@@ -45,9 +58,38 @@ const TableIntro = () => {
             </div>
           </div>
         </div>
+        <div className='my-5'>
+          <table {...getTableProps()}>
+            <thead className='sticky top-20'>
+              {headerGroups.map((headerGroup) => (
+                <tr {...headerGroup.getHeaderGroupProps()}>
+                  {headerGroup.headers.map((column) => (
+                    <th {...column.getHeaderProps()}>
+                      {column.render('Header')}
+                    </th>
+                  ))}
+                </tr>
+              ))}
+            </thead>
+            <tbody {...getTableBodyProps()}>
+              {rows.map((row, i) => {
+                prepareRow(row);
+                return (
+                  <tr {...row.getRowProps()}>
+                    {row.cells.map((cell) => {
+                      return (
+                        <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                      );
+                    })}
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
   );
 };
 
-export default TableIntro;
+export default Table;
