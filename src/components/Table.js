@@ -81,7 +81,7 @@ const Table = ({ columns, data }) => {
                   {headerGroup.headers.map((column) => (
                     <th
                       {...column.getHeaderProps(column.getSortByToggleProps())}
-                      className={`text-base border border-r border-l border-gray-200 p-2 column.isSorted
+                      className={`text-base border border-r border-l border-gray-200 p-2 text-black column.isSorted
                           ? column.isSortedDesc
                             ? 'sort-desc'
                             : 'sort-asc'
@@ -102,7 +102,7 @@ const Table = ({ columns, data }) => {
                     {row.cells.map((cell) => {
                       return (
                         <td
-                          className='p-2 border border-b border-t border-gray-200'
+                          className='p-2 border border-b border-t border-gray-200 text-gray-800'
                           {...cell.getCellProps()}
                         >
                           {cell.render('Cell')}
