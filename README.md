@@ -6,4 +6,4 @@ This is a Covid-19 dashboard project, bootstrapped with [`create-next-app`](http
 
 - Next.js & React for building UIs
 - Tailwind CSS for styling components
-- React icons, react-svg-worldmap, react-table
+- Hooks and Context API for managing state
