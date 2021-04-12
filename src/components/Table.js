@@ -70,9 +70,9 @@ const Table = ({ columns, data }) => {
             </label>
           </div>
         </div>
-        <div className='py-5'>
+        <div className='py-5 overflow-x-auto'>
           <table
-            className='overflow-x-auto bg-white border border-gray-200'
+            className='bg-white border border-gray-200'
             {...getTableProps()}
           >
             <thead>
