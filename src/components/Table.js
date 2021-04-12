@@ -46,7 +46,7 @@ const Table = ({ columns, data }) => {
                 placeholder='Eg. Malaysia'
                 value={filterInput}
                 onChange={handleFilterChange}
-                className='mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
+                className='mt-1 block w-full text-gray-800 rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
               />
             </label>
           </div>
@@ -61,7 +61,7 @@ const Table = ({ columns, data }) => {
                     timeFrame: value.toLowerCase(),
                   }));
                 }}
-                className='block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:border-independence-300 focus:ring focus:ring-independence-200 focus:ring-opacity-50'
+                className='block w-full mt-1 text-gray-800 rounded-md border-gray-300 shadow-sm focus:border-independence-300 focus:ring focus:ring-independence-200 focus:ring-opacity-50'
               >
                 <option>Today</option>
                 <option>Yesterday</option>
