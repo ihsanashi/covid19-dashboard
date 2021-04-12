@@ -9,7 +9,7 @@ const Header = ({ data }) => {
           <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900'>
             Covid-19 Latest
           </h2>
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
         </div>
         <div className='border border-forestGreen-200 my-5'></div>
         <div className='my-5'>
