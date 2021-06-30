@@ -1,8 +1,19 @@
+# Table of Contents
+
+- [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Technologies](#technologies)
+  - [Screenshots/Gifs](#screenshotsgifs)
+  - [Live site](#live-site)
+  - [Getting Started](#getting-started)
+  - [Learn More](#learn-more)
+  - [Deploy on Vercel](#deploy-on-vercel)
+
 ## Introduction
 
 This is a Covid-19 dashboard project, bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-### Technologies
+## Technologies
 
 - Next.js & React for the UI
 - Tailwind CSS for styling components
