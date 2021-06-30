@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Header from '../src/components/Header';
-import MapInfo from '../src/components/MapInfo';
 import Table from '../src/components/Table';
 import { useMemo, useState, useContext, useEffect } from 'react';
 import { AppContext } from '../src/context/state';
@@ -120,7 +119,7 @@ export default function Home({ overviewData }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const baseUrl = 'https://disease.sh/v3/covid-19';
 
   const overviewRes = await fetch(`${baseUrl}/all`);
