@@ -11,7 +11,7 @@
 
 ## Introduction
 
-This is a Covid-19 dashboard project, bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a site for viewing the latest Covid-19 statistics for all countries, bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). There is also an input box, for searching a specific country.
 
 ## Technologies
 
